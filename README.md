@@ -1,2 +1,2 @@
-# de-zoomcamp-dota-loader
+# Dota2
 A capstone project for Data Engineering Zoomcamp.
