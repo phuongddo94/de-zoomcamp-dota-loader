@@ -9,3 +9,8 @@ dependencies = [
     "pyarrow>=23.0.1",
     "requests>=2.32.5",
 ]
+
+[dependency-groups]
+dev = [
+    "pgcli>=4.4.0",
+]
