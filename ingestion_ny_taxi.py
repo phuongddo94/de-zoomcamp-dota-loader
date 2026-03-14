@@ -30,13 +30,6 @@ parse_dates = [
     "tpep_dropoff_datetime"
 ]
 
-df = pd.read_csv(
-    prefix + 'yellow_tripdata_2021-01.csv.gz',
-    nrows=100,
-    dtype=dtype,
-    parse_dates=parse_dates
-)
-
 
 @click.command()
 @click.option('--pg-user', default='root', help='PostgreSQL user')

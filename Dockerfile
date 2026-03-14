@@ -6,10 +6,10 @@ FROM python:3.13.10-slim
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /bin/
 
 # set the working directory in the container
-WORKDIR /app
+WORKDIR /code
 
 # Add virtual environment to PATH
-ENV PATH="/app/.venv/bin:$PATH"
+ENV PATH="/code/.venv/bin:$PATH"
 
 # copy the pyproject.toml and uv.lock files to the container
 COPY "pyproject.toml" "uv.lock" ".python-version" ./
@@ -17,7 +17,7 @@ COPY "pyproject.toml" "uv.lock" ".python-version" ./
 RUN uv sync --locked
 
 # copy the local code to the container
-COPY ingestion.py ingestion_docker.py
+COPY ingestion_ny_taxi.py .
 
 # define what to do when the container starts
-ENTRYPOINT ["uv", "run", "python", "ingestion_docker.py" ]
+ENTRYPOINT ["uv", "run", "python", "ingestion_ny_taxi.py" ]
