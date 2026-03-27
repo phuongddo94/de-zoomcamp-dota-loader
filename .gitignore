@@ -1,1 +1,12 @@
 *.parquet
+*.tfstate
+*.tfstate.*
+**.terraform
+**.terraform.lock.*
+*.csv
+*.json
+**.env
+**__pycache__/
+*.ipynb_checkpoints
+.DS_Store
+.idea/
