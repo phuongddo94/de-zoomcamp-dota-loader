@@ -1,0 +1,10 @@
+version: 1
+
+sources:
+  - name: staging
+    database: de-zoomcamp-d2loader
+    schema: ny_taxi
+
+    tables:
+      - name: green_tripdata
+      - name: yellow_trip_data
